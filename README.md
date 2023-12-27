@@ -41,6 +41,14 @@ The typical layout of the project will look as follows:
     │           ├── Question3.java
     │           ├── Question4.java
     │           └── Question5.java
+    └── test
+        └── java
+            └── assessment
+                ├── TestQuestion1.java
+                ├── TestQuestion2.java
+                ├── TestQuestion3.java
+                ├── TestQuestion4.java
+                └── TestQuestion5.java
 ```
 
 - The `pom.xml` file is your central project configuration file. If your project needs **ANY** external dependency, it **MUST** be listed in this file appropriately.
@@ -86,3 +94,8 @@ For a more complete example, you can view the [Question1.xml](Questions/Question
 
 - When you're pasting the code into the xml file, make sure you replace angle brackets with their xml escaped versions.
 - i.e., every `<` should be replaced with `&lt;` and every `>` should be replaced with `&gt;` including the semi-colons.
+
+## Writing Your Tests
+
+- Please use TestNG to write your tests.
+- Make sure you add TestNG as a dependency to your `pom.xml` file.
