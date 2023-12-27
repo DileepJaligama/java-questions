@@ -1,0 +1,67 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION1</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question1{
+    public static void main(String args[]){
+        Car car = new Car();
+        car.color = "red";
+        car.make = 2023;
+        car.transmission = "automation";
+        car.displayCharacterstics();
+        car.accelerate();
+        car.brake();
+    }
+}
+//your code starts here
+            </initial_display>
+            <answer_display>
+
+public class Question1 {
+    public static void main(String args[]){
+        Car car = new Car();
+        car.color = "red";
+        car.make = 2023;
+        car.transmission = "automation";
+        car.displayCharacterstics();
+        car.accelerate();
+        car.brake();
+    }
+}
+class Car{
+    String color;
+    int make;
+    String transmission;
+    int tyres;
+    int doors;
+
+    Car() {
+        tyres = 4;
+        doors = 4;
+    }
+
+    public void displayCharacterstics(){
+        System.out.println("Color of the Car: " + color);
+        System.out.println("Make of the Car: " + make);
+        System.out.println("Transmission of the Car: " + transmission);
+        System.out.println("Number of doors on the car: " + doors);
+        System.out.println("Number of tyres on the car: " + tyres);
+    }
+
+    public void accelerate() {
+        System.out.println("Car is moving forward.");
+    }
+
+    public void brake() {
+        System.out.println("Car has stopped.");
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

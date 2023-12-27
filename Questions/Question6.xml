@@ -1,0 +1,82 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-6</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+                class Plane {
+                public List&lt;String&gt; passengers;
+                public int maxPassengers;
+                public Date lastTimeTookOf;
+                public Date lastTimeLanded;
+                //your code goes here
+                }
+            </initial_display>
+<answer_display>
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+class Plane {
+    private List&lt;String&gt; passengers;
+    private int maxPassengers;
+    private Date lastTimeTookOf;
+    private Date lastTimeLanded;
+
+    public Plane(int maxPassengers) {
+        this.maxPassengers = maxPassengers;
+        this.passengers = new ArrayList&gt;&lt;();
+    }
+
+    public void onboard(String passenger) {
+        this.passengers.add(passenger);
+    }
+
+    public Date takeOff() {
+        this.lastTimeTookOf = new Date();
+        return lastTimeTookOf;
+    }
+
+    public void land() {
+        this.lastTimeLanded = new Date();
+        this.passengers.clear();
+    }
+
+    public Date getLastTimeLanded() {
+        return lastTimeLanded;
+    }
+
+    public List &lt;String&gt; getPassengers() {
+        return passengers;
+    }
+}
+
+public class Question6 {
+
+    public static void main(String[] args) throws InterruptedException {
+        //There is a plane with max 10 passengers
+        Plane plane = new Plane(10);
+        //Add passengers on the list
+        plane.onboard("John");
+        plane.onboard("Steve");
+        plane.onboard("Anna");
+        //Plane takes off
+        System.out.println("Plane took off at: " + plane.takeOff());
+        //Print list of people on board
+        System.out.println("People on the plane: " + plane.getPassengers());
+        //Flying.....
+        Thread.sleep(5000);
+        //Plane has landed
+        plane.land();
+        //Plane lands
+        System.out.println("Plane landed at: " + plane.getLastTimeLanded());
+        System.out.println("People on the plane after landing: " + plane.getPassengers());
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

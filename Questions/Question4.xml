@@ -1,0 +1,65 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-4</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+//psuedocode for insertion order
+/*
+insertionSort(array)
+mark first element as sorted
+for each unsorted element X
+'extract' the element X
+for j &gt;- lastSortedIndex down to 0
+if current element j &lt; X
+move sorted element to the right by 1
+break loop and insert X here
+end insertionSort
+*/
+
+public class Question4{
+    public static void main(String args[]) {
+    int[] data = { 9, 5, 1, 4, 3 };
+    ascendingSort(data);
+    System.out.println("Sorted Array in Ascending Order: ");
+    System.out.println(Arrays.toString(data));
+    }
+    static void ascendingSort(int array[]) {
+    //your code goes here
+    }
+}
+            </initial_display>
+            <answer_display>
+
+public class Question4 {
+
+    static void ascendingSort(int array[]) {
+        int size = array.length, i;
+
+        for (i = 1; i &lt; size; i++) {
+        int key = array[i];
+        int j = i - 1;
+
+        while (j &gt;= 0 &amp;&amp; key &lt; array[j]) {
+        array[j + 1] = array[j];
+        --j;
+        }
+        array[j + 1] = key;
+        }
+    }
+
+    public static void main(String args[]) {
+        int[] data = { 9, 5, 1, 4, 3 };
+        ascendingSort(data);
+        System.out.println("Sorted Array in Ascending Order: ");
+        System.out.println(Arrays.toString(data));
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

@@ -1,0 +1,68 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-2</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Activity2 {
+    public static void main(String[] args) {
+        //Initialize the array
+        int[] numArr = {10, 77, 10, 54, -11, 10};
+        System.out.println("Original Array: " + Arrays.toString(numArr));
+
+        //Set constants
+        int searchNum = 10;
+        int fixedSum = 30;
+
+        //Print result
+        System.out.println("Result: " + result(numArr, searchNum, fixedSum));
+        }
+
+        public static boolean result(int[] numbers, int searchNum, int fixedSum) {
+        //your code goes here
+    }
+}
+            </initial_display>
+            <answer_display>
+
+public class Question2 {
+    public static void main(String[] args) {
+        //Initialize the array
+        int[] numArr = {10, 77, 10, 54, -11, 10};
+        System.out.println("Original Array: " + Arrays.toString(numArr));
+
+        //Set constants
+        int searchNum = 10;
+        int fixedSum = 30;
+        //Print result
+        System.out.println("Result: " + result(numArr, searchNum, fixedSum));
+    }
+
+    public static boolean result(int[] numbers, int searchNum, int fixedSum) {
+        int temp_sum = 0;
+        //Loop through array
+        for (int number : numbers) {
+        //If value is 10
+        if (number == searchNum) {
+        //Add them
+        temp_sum += searchNum;
+        }
+
+        //Sum should not be more than 30
+        if (temp_sum &gt; fixedSum) {
+        break;
+        }
+        }
+
+        //Return true if condition satisfies
+        return temp_sum == fixedSum;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>
