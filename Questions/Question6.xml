@@ -4,13 +4,17 @@
         <textbox rows="15" cols="80" mode="java" tabsize="4"/>
         <codeparam>
             <initial_display>
-                class Plane {
-                public List&lt;String&gt; passengers;
-                public int maxPassengers;
-                public Date lastTimeTookOf;
-                public Date lastTimeLanded;
-                //your code goes here
-                }
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+class Plane {
+    public List&lt;String&gt; passengers;
+    public int maxPassengers;
+    public Date lastTimeTookOf;
+    public Date lastTimeLanded;
+    //your code goes here
+}
             </initial_display>
 <answer_display>
 import java.util.ArrayList;

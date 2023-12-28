@@ -1,0 +1,45 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-12</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+
+interface Addable {
+    int add(int a, int b);
+}
+
+
+public class Activity12 {
+    public static void main(String[] args) {
+    //your code goes here
+    }
+}
+            </initial_display>
+            <answer_display>
+
+interface Addable {
+    int add(int a, int b);
+}
+
+public class Activity12 {
+    public static void main(String[] args) {
+
+    // Lambda expression without return keyword.
+    Addable ad1 = (a, b) -&gt; (a + b);
+    System.out.println(ad1.add(10, 20));
+
+    // Lambda expression with return keyword.
+    Addable ad2 = (int a, int b) -&gt; {
+        return (a + b);
+    };
+    System.out.println(ad2.add(100, 200));
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

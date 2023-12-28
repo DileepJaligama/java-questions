@@ -1,0 +1,55 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-10</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.HashSet;
+
+public class Activity10 {
+    public static void main(String[] args) {
+    //your code goes here
+    }
+}
+            </initial_display>
+            <answer_display>
+import java.util.HashSet;
+
+public class Activity10 {
+    public static void main(String[] args) {
+        HashSet&lt;String&gt; hs = new HashSet&lt;String&gt;();
+        // Adding element to HashSet
+        hs.add("M");
+        hs.add("B");
+        hs.add("C");
+        hs.add("A");
+        hs.add("M");
+        hs.add("X");
+
+        //Print HashSet
+        System.out.println("Original HashSet: " + hs);
+        //Print size of HashSet
+        System.out.println("Size of HashSet: " + hs.size());
+
+        //Remove element
+        System.out.println("Removing A from HashSet: " + hs.remove("A"));
+        //Remove element that is not present
+        if(hs.remove("Z")) {
+            System.out.println("Z removed from the Set");
+        } else {
+            System.out.println("Z is not present in the Set");
+        }
+
+        //Search for element
+        System.out.println("Checking if M is present: " + hs.contains("M"));
+        //Print updated HashSet
+        System.out.println("Updated HashSet: " + hs);
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

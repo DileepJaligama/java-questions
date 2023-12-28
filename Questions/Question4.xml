@@ -16,7 +16,7 @@ move sorted element to the right by 1
 break loop and insert X here
 end insertionSort
 */
-
+import java.util.Arrays;
 public class Question4{
     public static void main(String args[]) {
     int[] data = { 9, 5, 1, 4, 3 };
@@ -30,7 +30,7 @@ public class Question4{
 }
             </initial_display>
             <answer_display>
-
+import java.util.Arrays;
 public class Question4 {
 
     static void ascendingSort(int array[]) {

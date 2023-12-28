@@ -1,0 +1,50 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-9</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+
+import java.util.ArrayList;
+public class Activity9 {
+    public static void main(String[] args) {
+        //you code goes here
+    }
+}
+            </initial_display>
+<answer_display>
+import java.util.ArrayList;
+
+public class Activity9 {
+    public static void main(String[] args) {
+        //declaring Arraylist of String objects
+        ArrayList&lt;String&gt; myList = new ArrayList&lt;String&gt;();
+        //Adding objects to Array List at default index
+        myList.add("Apple");
+        myList.add("Mango");
+        myList.add("Orange");
+        //Adding object at specific index
+        myList.add(3, "Grapes");
+        myList.add(1, "Papaya");
+
+        System.out.println("Print All the Objects:");
+        for(String s:myList){
+            System.out.println(s);
+        }
+
+        System.out.println("3rd element in the list is: " + myList.get(2));
+        System.out.println("Is Chicku is in list: " + myList.contains("Chicku"));
+        System.out.println("Size of ArrayList: " + myList.size());
+
+        myList.remove("Papaya");
+
+        System.out.println("New Size of ArrayList: " + myList.size());
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

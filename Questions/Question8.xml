@@ -1,0 +1,66 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>QUESTION-8</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+class CustomException extends Exception {
+    private String message = null;
+
+    public CustomException(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+}
+public class Activity8 {
+    public static void main(String[] a){
+        //your code goes here
+    }
+}
+            </initial_display>
+            <answer_display>
+class CustomException extends Exception {
+    private String message = null;
+
+    public CustomException(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+}
+
+public class Activity8 {
+    public static void main(String[] a){
+        try {
+            // Method call with correct input
+            Activity8.exceptionTest("Will print to console");
+            // Method call with incorrect input
+            Activity8.exceptionTest(null); // Exception is thrown here
+            Activity8.exceptionTest("Won't execute");
+        } catch(CustomException mae) {
+            System.out.println("Inside catch block: " + mae.getMessage());
+        }
+    }
+
+        static void exceptionTest(String str) throws CustomException {
+            if(str == null) {
+            throw new CustomException("String value is null");
+        } else {
+            System.out.println(str);
+        }
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "QuestionX", "program_output": "n/a", "program_language": "java", "solution_repo": "YOUR REPO'S SSH CLONE URL SHOULD GO HERE"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>
